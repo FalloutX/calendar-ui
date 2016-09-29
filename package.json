@@ -1,0 +1,35 @@
+{
+  "name": "falloutx-calendar-ui",
+  "version": "0.0.0",
+  "description": "A basic calendar user-interface.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FalloutX/calendar-ui.git"
+  },
+  "keywords": [
+    "calendar",
+    "vuejs",
+    "vue",
+    "ui-element"
+  ],
+  "author": "Inderjit Sidhu (FalloutX)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FalloutX/calendar-ui/issues"
+  },
+  "homepage": "https://github.com/FalloutX/calendar-ui#readme",
+  "devDependencies": {
+    "browser-sync": "^2.16.1",
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.5.0",
+    "nib": "^1.1.2",
+    "pump": "^1.0.1"
+  },
+  "dependencies": {
+    "vue": "^1.0.28"
+  }
+}
