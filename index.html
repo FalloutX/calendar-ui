@@ -9,6 +9,12 @@
 </head>
 <body>
   <div id="app">
+    <div id="app-header">
+      <div class="app-header-heading"><h1>{{todaymap.monthName}} - {{todaymap.year}}</h1></div>
+    </div>
+    <div class="stripes-border">
+      
+    </div>
     <ul class="days">
       <li>Sun</li>
       <li>Mon</li>
@@ -20,7 +26,7 @@
     </ul>
 
     <ul class="dates">
-      <li v-for="date in monthDays" :class="{'active': todaymap.date === date.date}">{{date.date === 0 ? '&nbsp;' : date.date }}</li>
+      <li v-for="date in monthDays" :class="{'active': todaymap.date === date.date, 'not-null': date.date > 0}">{{date.date === 0 ? '&nbsp;' : date.date }}</li>
     </ul>
 
   </div>

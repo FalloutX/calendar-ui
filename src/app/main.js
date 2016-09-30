@@ -7,13 +7,20 @@ const vm = new Vue({
   computed: {
     todaymap: function (){
       var today = this.today;
+      var monthNames = {
+        0: 'January', 1: 'February', 2: 'March', 3: 'April',
+        4: 'May', 5: 'June', 6: 'July', 7: 'August',
+        8: 'September', 9:'October', 10: 'November',
+        11: 'December'
+      }
 
       return {
         month: today.getMonth(),
         year: today.getFullYear(),
         date: today.getDate(),
         daysIntheMonth: new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate(),
-        leaveStart: new Date(today.getFullYear(), today.getMonth(), 1).getDay()
+        leaveStart: new Date(today.getFullYear(), today.getMonth(), 1).getDay(),
+        monthName: monthNames[today.getMonth()]
       };
     },
     monthDays: function () {
@@ -41,10 +48,10 @@ const vm = new Vue({
   },
   methods: {
     doInit: function(){
-      var that = this;
-      setInterval(function() {
-        that.$set('today', new Date());
-      }, 1000);
+      // var that = this;
+      // setInterval(function() {
+      //   that.$set('today', new Date());
+      // }, 1000);
     }
   },
   ready: function() {
