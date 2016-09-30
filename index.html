@@ -13,7 +13,7 @@
       <div class="app-header-heading"><h1>{{todaymap.monthName}} - {{todaymap.year}}</h1></div>
     </div>
     <div class="stripes-border">
-      
+
     </div>
     <ul class="days">
       <li>Sun</li>
@@ -28,7 +28,9 @@
     <ul class="dates">
       <li v-for="date in monthDays" :class="{'active': todaymap.date === date.date, 'not-null': date.date > 0}">{{date.date === 0 ? '&nbsp;' : date.date }}</li>
     </ul>
-
+    <div id="app-footer">
+      Available on <a href="https://github.com/FalloutX/calendar-ui">Github</a>. Made with <a href="http://vuejs.org/">Vue</a>.
+    </div>
   </div>
 
   <script src="node_modules/vue/dist/vue.js" charset="utf-8"></script>
