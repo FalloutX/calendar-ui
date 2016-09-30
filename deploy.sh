@@ -1,4 +1,5 @@
 git checkout deploy
+git rebase master
 npm install
 gulp css
 gulp js
