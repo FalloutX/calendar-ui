@@ -17,7 +17,7 @@ gulp.task('css', function(cb) {
 
 gulp.task('js', function(cb) {
   pump([
-    gulp.src('src/app/*.js'),
+    gulp.src(['src/app/*.js', 'node_modules/vue/dist/vue.js']),
     gulp.dest('dist/app/')
   ], cb);
 })
