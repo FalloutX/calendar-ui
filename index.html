@@ -13,15 +13,15 @@
     <div id="app-header">
       <div class="app-header-heading">
         <span class="app-header-month">
-          <button class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
-          <span class="app-header-month-name">{{todaymap.monthName}}</span>
-          <button class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
+          <button @click="changeMonth(-1)" class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
+          <span class="app-header-month-name">{{monthName}}</span>
+          <button @click="changeMonth(+1)" class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
         </span>
 
          <span class="app-header-year">
-           <button class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
-           <span class="app-header-year-name">{{todaymap.year}}</span>
-           <button class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
+           <button @click="changeYear(-1)" class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
+           <span class="app-header-year-name">{{year}}</span>
+           <button @click="changeYear(+1)" class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
          </span>
        </div>
     </div>
@@ -39,7 +39,7 @@
     </ul>
 
     <ul class="dates">
-      <li v-for="date in monthDays" :class="{'active': todaymap.date === date.date, 'not-null': date.date > 0}"><span class="date-text">{{date.date === 0 ? '&nbsp;' : date.date }}</span></li>
+      <li v-for="date in monthDays" :class="{'active': isToday(date), 'not-null': date.date > 0}"><span class="date-text">{{date.date === 0 ? '&nbsp;' : date.date }}</span></li>
     </ul>
     <div id="app-footer">
       Available on <a href="https://github.com/FalloutX/calendar-ui">Github</a>. Made with <a href="http://vuejs.org/">Vue</a>.
