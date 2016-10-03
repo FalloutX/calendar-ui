@@ -48,13 +48,14 @@ const vm = new Vue({
   },
   methods: {
     doInit: function(){
+      console.log("doInit");
       // var that = this;
       // setInterval(function() {
       //   that.$set('today', new Date());
       // }, 1000);
     }
   },
-  ready: function() {
+  mounted: function (){
     this.doInit();
   }
 })
