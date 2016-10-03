@@ -6,11 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calendar UI</title>
   <link rel="stylesheet" href="dist/styles/main.css">
+  <link rel="stylesheet" href="vendor/fontello/css/fontello.css">
 </head>
 <body>
   <div id="app">
     <div id="app-header">
-      <div class="app-header-heading"><h1>{{todaymap.monthName}} - {{todaymap.year}}</h1></div>
+      <div class="app-header-heading">
+        <span class="app-header-month">
+          <button class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
+          <span class="app-header-month-name">{{todaymap.monthName}}</span>
+          <button class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
+        </span>
+
+         <span class="app-header-year">
+           <button class="change-btn"><i class="demo-icon icon-angle-left"></i></button>
+           <span class="app-header-year-name">{{todaymap.year}}</span>
+           <button class="change-btn"><i class="demo-icon icon-angle-right"></i></button>
+         </span>
+       </div>
     </div>
     <div class="stripes-border">
 
